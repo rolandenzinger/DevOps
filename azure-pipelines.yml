@@ -13,13 +13,18 @@ steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'MyA/pom.xml'
-    mavenOptions: '-Xmx3072m'
-    javaHomeOption: 'JDKVersion'
-    jdkVersionOption: '1.8'
-    jdkArchitectureOption: 'x64'
+    goals: 'validate package test surefire-report:report'
     publishJUnitResults: true
     testResultsFiles: '**/test-reports/*.html'
-    goals: 'validate package test surefire-report:report'
+    testRunTitle: 'The Main Test Run'
+    codeCoverageToolOption: 'JaCoCo'
+    javaHomeOption: 'JDKVersion'
+    jdkVersionOption: '1.8'
+    mavenVersionOption: 'Default'
+    mavenOptions: '-Xmx3072m'
+    mavenAuthenticateFeed: false
+    effectivePomSkip: false
+    sonarQubeRunAnalysis: false
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
