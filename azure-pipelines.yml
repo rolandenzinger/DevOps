@@ -19,7 +19,7 @@ steps:
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/test-reports/*.html'
-    goals: 'package surefire-report:report'
+    goals: 'validate package test surefire-report:report'
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'JUnit'
