@@ -13,6 +13,16 @@ class TestAllTheThings {
 	void testAddition() {
 		
 		assertEquals( MyMainClass.addTwoNumbers(4,3), 7);
+		
+		
+	}
+	
+	@Test
+	void testSecondAddition() {
+		
+		assertEquals( MyMainClass.addTwoNumbers(5,5),10);
+		
+		
 	}
 
 }
