@@ -12,7 +12,7 @@ class TestAllTheThings {
 	@Test
 	void testAddition() {
 		
-		assertEquals( addTwoNumbers(4,3), 7);
+		assertEquals( MyMainClass.addTwoNumbers(4,3), 7);
 	}
 
 }
