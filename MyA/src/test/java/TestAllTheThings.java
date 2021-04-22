@@ -20,7 +20,7 @@ class TestAllTheThings {
 	@Test
 	void testSecondAddition() {
 		
-		assertEquals( MyMainClass.addTwoNumbers(5,5),10);
+		assertEquals( MyMainClass.addTwoNumbers(10,5),15);
 		
 		
 	}
