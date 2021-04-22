@@ -8,5 +8,11 @@ class TestAllTheThings {
 	void testEverything() {
 		assertTrue(true);
 	}
+	
+	@Test
+	void testAddition() {
+		
+		assertEquals( addTwoNumbers(4,3), 7);
+	}
 
 }
